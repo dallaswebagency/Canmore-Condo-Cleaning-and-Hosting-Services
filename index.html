@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canmore Condo Cleaning &amp; Hosting Services | Airbnb &amp; Vacation Rental Cleaning in Canmore, AB</title>
+<meta name="description" content="Cleaning and hosting services in the town of Canmore, Alberta. Airbnb and vacation rental turnover specialists, plus residential, commercial and carpet and floor cleaning.">
+<meta name="theme-color" content="#3a3d3f">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2f3234;        /* charcoal, from the logo grey */
+  --slate:#585858;      /* exact logo grey */
+  --stone:#8a8f91;
+  --snow:#f6f4ef;       /* warm off-white */
+  --mist:#e9e6df;
+  --line:#d6d2c8;
+  --river:#3f7f83;      /* Bow River glacier teal accent */
+  --river-d:#2d6064;
+  --frost:#dcebea;
+  --serif:'Young Serif',Georgia,serif;
+  --sans:'Hanken Grotesk',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--snow);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1240px,92vw);margin:0 auto}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--river-d)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:600;font-size:15px;text-decoration:none;padding:15px 26px;border-radius:999px;border:1.5px solid var(--ink);transition:.25s;cursor:pointer}
+.btn-dark{background:var(--ink);color:var(--snow)}
+.btn-dark:hover{background:var(--river-d);border-color:var(--river-d)}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--snow)}
+.btn svg{width:16px;height:16px}
+
+/* ribbon */
+.ribbon{background:var(--river-d);color:#fff;font-size:14px;text-align:center;padding:9px 16px}
+.ribbon a{font-weight:600;text-underline-offset:3px}
+.ribbon .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#9fe0d6;margin-right:10px;box-shadow:0 0 0 4px rgba(159,224,214,.25);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(159,224,214,0)}}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(246,244,239,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+.nav .logo img{height:54px;width:auto}
+.nav ul{display:flex;gap:34px;list-style:none;align-items:center}
+.nav ul a{text-decoration:none;font-weight:500;font-size:15px;position:relative}
+.nav ul a:after{content:"";position:absolute;left:0;bottom:-6px;height:1.5px;width:0;background:var(--river);transition:.25s}
+.nav ul a:hover:after{width:100%}
+.dd{position:relative}
+.dd-menu{position:absolute;top:calc(100% + 18px);left:-20px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;min-width:250px;opacity:0;visibility:hidden;transform:translateY(6px);transition:.2s;box-shadow:0 20px 40px -20px rgba(0,0,0,.25)}
+.dd:hover .dd-menu{opacity:1;visibility:visible;transform:none}
+.dd-menu a{display:block;padding:9px 12px;border-radius:8px;font-size:14.5px}
+.dd-menu a:hover{background:var(--mist)}
+.dd-menu a:after{display:none}
+.burger{display:none;background:none;border:0;width:42px;height:42px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--ink);margin:7px 8px}
+
+/* hero */
+.hero{padding:70px 0 0;position:relative}
+.hero-top{display:grid;grid-template-columns:1.35fr .65fr;gap:60px;align-items:end}
+.hero h1{font-size:clamp(48px,7.6vw,112px);color:var(--ink)}
+.hero h1 em{font-style:normal;color:var(--river)}
+.hero-side p{font-size:19px;color:#4a4e50;margin:14px 0 28px}
+.hero-side .btns{display:flex;gap:12px;flex-wrap:wrap}
+.hero-kicker{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.hero-kicker:before{content:"";width:40px;height:1.5px;background:var(--river)}
+.pano{position:relative;margin-top:56px}
+.pano .ridge{display:block;width:100%;height:auto;position:relative;z-index:2;margin-bottom:-2px}
+.pano-img{position:relative;height:clamp(320px,46vw,620px);overflow:hidden}
+.pano-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.04)}
+.pano-img:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(30,32,33,.55))}
+.pano-tag{position:absolute;z-index:3;left:4vw;bottom:36px;color:#fff;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.pano-tag span{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;border:1px solid rgba(255,255,255,.55);padding:8px 14px;border-radius:999px;backdrop-filter:blur(4px);background:rgba(255,255,255,.08)}
+.pano-card{position:absolute;z-index:3;right:4vw;bottom:-60px;background:var(--ink);color:var(--snow);width:min(380px,86vw);padding:30px 30px 26px;border-radius:4px}
+.pano-card .label{color:#9fd3cf}
+.pano-card h3{font-size:28px;margin:10px 0 10px}
+.pano-card p{font-size:15px;color:#c9cbc9}
+.pano-card a{display:inline-flex;margin-top:16px;color:#fff;font-weight:600;font-size:15px;gap:8px;align-items:center;text-underline-offset:4px}
+
+/* airbnb specialists */
+.specialist{padding:160px 0 120px}
+.sp-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
+.sp-head h2{font-size:clamp(36px,4.4vw,60px);margin:18px 0 24px}
+.sp-head p{color:#4a4e50;max-width:470px}
+.sp-head .btn{margin-top:30px}
+.ticket{background:#fff;border:1px solid var(--line);border-radius:6px;position:relative;overflow:hidden}
+.ticket-img{height:300px;overflow:hidden}
+.ticket-img img{width:100%;height:100%;object-fit:cover}
+.ticket-body{padding:34px 36px 30px;position:relative}
+.ticket-body:before{content:"";position:absolute;top:0;left:22px;right:22px;border-top:2px dashed var(--line)}
+.ticket-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;gap:12px;flex-wrap:wrap}
+.ticket-head h3{font-size:26px}
+.stamp{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--river-d);border:1.5px solid var(--river);padding:6px 12px;border-radius:4px;transform:rotate(-3deg)}
+.checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0}
+.checks li{display:flex;gap:12px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--mist);font-weight:500}
+.checks li:nth-child(odd){padding-right:18px}
+.checks svg{flex:none;width:22px;height:22px;margin-top:2px}
+
+/* services index */
+.services{background:var(--ink);color:var(--snow);padding:110px 0 120px;position:relative;overflow:hidden}
+.services .label{color:#9fd3cf}
+.svc-top{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:60px;flex-wrap:wrap}
+.svc-top h2{font-size:clamp(36px,4.4vw,60px);max-width:640px;margin-top:16px}
+.svc-top p{color:#b9bcbb;max-width:380px}
+.svc-row{display:grid;grid-template-columns:90px 1fr 1.1fr 300px;gap:36px;align-items:center;padding:34px 0;border-top:1px solid rgba(255,255,255,.14);transition:.3s}
+.svc-row:last-of-type{border-bottom:1px solid rgba(255,255,255,.14)}
+.svc-row .num{font-family:var(--mono);font-size:13px;color:#9fd3cf;letter-spacing:.1em}
+.svc-row h3{font-size:clamp(26px,2.6vw,36px)}
+.svc-row p{color:#b9bcbb;font-size:16px}
+.svc-row .thumb{height:170px;border-radius:4px;overflow:hidden;position:relative}
+.svc-row .thumb img{width:100%;height:100%;object-fit:cover;filter:grayscale(.5);transition:.5s}
+.svc-row:hover .thumb img{filter:none;transform:scale(1.05)}
+.svc-row:hover h3{color:#9fd3cf}
+.svc-row .more{display:inline-flex;gap:8px;margin-top:12px;color:#fff;font-weight:600;font-size:14.5px;text-underline-offset:4px}
+.also{display:flex;gap:18px;align-items:center;margin-top:46px;flex-wrap:wrap}
+.also .label{color:#8f9492}
+.also a{text-decoration:none;border:1px solid rgba(255,255,255,.25);padding:10px 18px;border-radius:999px;font-size:14.5px;transition:.25s}
+.also a:hover{background:var(--snow);color:var(--ink)}
+.peaks-bg{position:absolute;right:-60px;top:40px;width:520px;opacity:.06;pointer-events:none}
+
+/* about */
+.about{padding:120px 0}
+.ab-grid{display:grid;grid-template-columns:auto 1fr;gap:90px;align-items:center}
+.since{position:relative;width:340px}
+.since .yr{font-family:var(--serif);font-size:150px;line-height:.9;color:var(--river);display:block}
+.since .yr-l{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin-top:10px;display:block}
+.since .pic{margin-top:30px;width:100%;height:230px;border-radius:200px 200px 200px 200px/120px 120px 120px 120px;overflow:hidden;display:none}
+.since .circle{margin-top:34px;width:240px;height:240px;border-radius:50%;overflow:hidden;border:10px solid #fff;box-shadow:0 20px 40px -24px rgba(0,0,0,.35)}
+.since .circle img{width:100%;height:100%;object-fit:cover}
+.ab-copy h2{font-size:clamp(34px,3.8vw,52px);margin:16px 0 26px}
+.ab-copy p{color:#4a4e50;font-size:18px;max-width:640px}
+.ab-facts{display:grid;grid-template-columns:repeat(3,1fr);margin-top:44px;border-top:1px solid var(--line)}
+.ab-facts div{padding:22px 20px 0 0}
+.ab-facts strong{display:block;font-family:var(--serif);font-weight:400;font-size:22px;margin-bottom:4px}
+.ab-facts span{font-size:14.5px;color:#5c6062}
+
+/* quote */
+.quote{background:var(--frost);padding:110px 0;position:relative}
+.q-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
+.q-info h2{font-size:clamp(36px,4.4vw,58px);margin:16px 0 22px}
+.q-info p{color:#41595a;max-width:420px}
+.addr{margin-top:38px;padding:26px 0;border-top:1px solid rgba(45,96,100,.25);border-bottom:1px solid rgba(45,96,100,.25);display:flex;gap:16px}
+.addr svg{width:24px;height:24px;flex:none;color:var(--river-d)}
+.addr strong{display:block;font-weight:600}
+.addr a{font-size:14.5px;color:var(--river-d);font-weight:600;text-underline-offset:3px}
+form{background:#fff;border-radius:6px;padding:40px;box-shadow:0 30px 60px -40px rgba(30,60,60,.45)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.fld{margin-bottom:18px}
+.fld label{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin-bottom:8px}
+.fld input,.fld select,.fld textarea{width:100%;font:inherit;font-size:16px;border:0;border-bottom:1.5px solid var(--line);padding:10px 2px;background:transparent;color:var(--ink);outline:none;transition:.2s;border-radius:0}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--river)}
+.fld textarea{min-height:110px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.chips label{text-transform:none;letter-spacing:0;font-family:var(--sans);font-size:14.5px;color:var(--ink);margin:0}
+.chips input{display:none}
+.chips span{display:inline-block;padding:9px 16px;border:1.5px solid var(--line);border-radius:999px;cursor:pointer;transition:.2s}
+.chips input:checked+span{background:var(--ink);border-color:var(--ink);color:#fff}
+form .btn{width:100%;justify-content:center;margin-top:8px}
+
+/* footer */
+footer{background:#232526;color:#c9cbc9;padding:80px 0 0;position:relative}
+.ft-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:50px;padding-bottom:60px}
+.ft-logo img{height:64px;width:auto;filter:brightness(0) invert(1);opacity:.92}
+.ft-grid p{font-size:15px;margin-top:18px;max-width:300px}
+.ft-grid h4{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9fd3cf;margin-bottom:18px}
+.ft-grid ul{list-style:none}
+.ft-grid li{margin-bottom:10px;font-size:15px}
+.ft-grid li a{text-decoration:none}
+.ft-grid li a:hover{color:#fff}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.1);padding:24px 0;display:flex;justify-content:space-between;font-size:14px;flex-wrap:wrap;gap:10px}
+.ft-bottom a{color:#fff;text-underline-offset:3px}
+.ft-ridge{display:block;width:100%;height:auto;margin-bottom:-1px;background:var(--frost)}
+
+.mbar{display:none}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:1020px){
+  .hero-top,.sp-grid,.ab-grid,.q-grid{grid-template-columns:1fr;gap:44px}
+  .svc-row{grid-template-columns:60px 1fr;gap:18px}
+  .svc-row p{grid-column:2}
+  .svc-row .thumb{grid-column:1/-1;height:220px}
+  .ft-grid{grid-template-columns:1fr 1fr}
+  .since{width:auto;display:flex;gap:30px;align-items:center;flex-wrap:wrap}
+  .since .circle{margin-top:0}
+}
+@media(max-width:860px){
+  .nav ul,.nav .btn{display:none}
+  .burger{display:block}
+  .nav.open ul{display:flex;flex-direction:column;position:absolute;top:84px;left:0;right:0;background:var(--snow);padding:24px 6vw;gap:18px;border-bottom:1px solid var(--line);align-items:flex-start}
+  .dd-menu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;padding:6px 0 0 10px;background:transparent}
+  .pano-card{position:relative;right:auto;bottom:auto;margin:-40px auto 0;width:92vw}
+  .specialist{padding-top:90px}
+  .checks{grid-template-columns:1fr}
+  .f2{grid-template-columns:1fr}
+  form{padding:28px 22px}
+  .ab-facts{grid-template-columns:1fr}
+  .mbar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--ink);padding:10px;gap:10px}
+  .mbar a{flex:1;justify-content:center;padding:13px}
+  .mbar .btn-line{color:#fff;border-color:rgba(255,255,255,.4)}
+  body{padding-bottom:66px}
+}
+@media(max-width:560px){.ft-grid{grid-template-columns:1fr}.since .yr{font-size:110px}}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><span class="dot"></span>Currently accepting new clients! <a href="#quote">Get a quote</a></div>
+
+<header>
+  <div class="wrap nav" id="nav">
+    <a href="#" class="logo" aria-label="Canmore Condo Cleaning and Hosting Services home"><img src="images/logo.png" alt="Canmore Condo Cleaning and Hosting Services logo"></a>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li class="dd"><a href="#services">Our Services ▾</a>
+        <div class="dd-menu">
+          <a href="#airbnb">Vacation Rentals / Airbnb</a>
+          <a href="#services">Carpet and Floor Cleaning</a>
+          <a href="#services">Commercial</a>
+          <a href="#services">Residential</a>
+          <a href="#services">Handyman Services</a>
+          <a href="#services">Photo and Video</a>
+        </div>
+      </li>
+      <li><a href="#about">About us</a></li>
+      <li><a href="#quote">Contact form</a></li>
+    </ul>
+    <a href="#quote" class="btn btn-dark">Get a quote</a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-top">
+    <div class="rv">
+      <div class="hero-kicker label">Canmore, Alberta</div>
+      <h1>Canmore Condo Cleaning <em>&amp;&nbsp;Hosting</em> Services</h1>
+    </div>
+    <div class="hero-side rv">
+      <span class="label">AirBnB / Vacation rental cleaning specialists</span>
+      <p>Cleaning and hosting services in the town of Canmore, keeping rentals, homes and businesses spotless.</p>
+      <div class="btns">
+        <a href="#quote" class="btn btn-dark">Get a quote now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#services" class="btn btn-line">Our services</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pano">
+    <svg class="ridge" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V96l120-30 90 22 150-70 110 52 80-28 140 58 170-86 120 60 90-24 150 54 110-36 110 30v22H0z" fill="#f6f4ef"/><path d="M0 96l120-30 90 22 150-70 110 52 80-28 140 58 170-86 120 60 90-24 150 54 110-36 110 30" fill="none" stroke="#585858" stroke-width="2"/></svg>
+    <div class="pano-img"><img src="images/hero-canmore-condo.jpg" alt="Clean, guest-ready condo living room in Canmore"></div>
+    <div class="pano-tag"><span>Vacation Rentals</span><span>Residential</span><span>Commercial</span><span>Carpet &amp; Floor</span></div>
+    <div class="pano-card">
+      <span class="label">Currently accepting new clients</span>
+      <h3>Guest-ready, every turnover.</h3>
+      <p>Airbnb and vacation rental cleaning is what we specialize in, from quick turnovers between bookings to deep cleans before new arrivals.</p>
+      <a href="#quote">Get a quote →</a>
+    </div>
+  </div>
+</section>
+
+<section class="specialist" id="airbnb">
+  <div class="wrap sp-grid">
+    <div class="sp-head rv">
+      <span class="label">01 / Vacation Rentals / Airbnb</span>
+      <h2>Your rental, always guest-ready.</h2>
+      <p>Our Airbnb cleaning services are designed to ensure your property is always guest-ready. We handle the work between check-out and check-in, so every guest walks into a fresh, spotless space.</p>
+      <a href="#quote" class="btn btn-dark">Book turnover cleaning</a>
+    </div>
+    <div class="ticket rv">
+      <div class="ticket-img"><img src="images/airbnb-turnover.jpg" alt="Freshly cleaned vacation rental condo"></div>
+      <div class="ticket-body">
+        <div class="ticket-head"><h3>Turnover checklist</h3><span class="stamp">Guest-ready</span></div>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#3f7f83" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Quick turnovers between bookings</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#3f7f83" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Deep cleans before new arrivals</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#3f7f83" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Fresh linens</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#3f7f83" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Spotless finishes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <svg class="peaks-bg" viewBox="0 0 200 90" fill="none" stroke="#fff" stroke-width="3" aria-hidden="true"><path d="M5 85L60 20l30 35 35-50 70 80"/></svg>
+  <div class="wrap">
+    <div class="svc-top rv">
+      <div><span class="label">Our Services</span><h2>More than rentals. Homes, offices and floors too.</h2></div>
+      <p>Flexible cleaning built around your needs, whether it's a regular appointment or a one-off request.</p>
+    </div>
+
+    <div class="svc-row rv">
+      <span class="num">02</span>
+      <div><h3>Residential</h3><a href="#quote" class="more">Request a quote →</a></div>
+      <p>Our residential services are tailored to each client's individual needs. Book regular appointments or one-off requests, whatever suits your home.</p>
+      <div class="thumb"><img src="images/residential-cleaning.jpg" alt="Clean residential living room"></div>
+    </div>
+    <div class="svc-row rv">
+      <span class="num">03</span>
+      <div><h3>Commercial</h3><a href="#quote" class="more">Request a quote →</a></div>
+      <p>We offer a wide range of commercial and office cleaning services to fit in with your schedule and requirements. Each business is different, and we understand this.</p>
+      <div class="thumb"><img src="images/commercial-cleaning.jpg" alt="Clean office workspace"></div>
+    </div>
+    <div class="svc-row rv">
+      <span class="num">04</span>
+      <div><h3>Carpet &amp; Floor Cleaning</h3><a href="#quote" class="more">Request a quote →</a></div>
+      <p>Carpet and floor cleaning as part of our services, including deep cleaning for tiled floors such as grout scrubbing or steam cleaning.</p>
+      <div class="thumb"><img src="images/carpet-floor-cleaning.jpg" alt="Vacuuming a carpet rug in a living room"></div>
+    </div>
+
+    <div class="also rv">
+      <span class="label">Also available</span>
+      <a href="#quote">Handyman Services</a>
+      <a href="#quote">Photo and Video</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap ab-grid">
+    <div class="since rv">
+      <div><span class="yr">2022</span><span class="yr-l">Specializing in Canmore since</span></div>
+      <div class="circle"><img src="images/about-canmore.jpg" alt="Bright, tidy condo interior"></div>
+    </div>
+    <div class="ab-copy rv">
+      <span class="label">About us</span>
+      <h2>Your trusted cleaning partner in Canmore.</h2>
+      <p>Welcome to Canmore Condo Cleaning and Hosting Services, your trusted partner for cleaning services in Canmore, Alberta. Since 2022, we have specialized in Airbnb turnover cleaning as well as residential cleaning, helping hosts and homeowners keep their spaces fresh and welcoming.</p>
+      <div class="ab-facts">
+        <div><strong>Airbnb turnovers</strong><span>Our specialty since day one</span></div>
+        <div><strong>Hosting services</strong><span>Cleaning and hosting in one</span></div>
+        <div><strong>Canmore, AB</strong><span>Local to Bow Meadows</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="ft-ridge" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true" style="background:var(--snow)"><path d="M0 70V50l160-26 120 18 170-40 140 34 120-20 170 30 200-46 150 40 110-16 100 26v20z" fill="#dcebea"/></svg>
+<section class="quote" id="quote">
+  <div class="wrap q-grid">
+    <div class="q-info rv">
+      <span class="label">Get a quote now</span>
+      <h2>Currently accepting new clients.</h2>
+      <p>Tell us about your rental, home or business and the service you need. We'll get back to you with a quote.</p>
+      <div class="addr">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        <div><strong>130 Bow Meadows Crescent, Unit 100</strong>Canmore, AB T1W 2W8<br><a href="https://maps.google.com/?q=130+Bow+Meadows+Crescent+Unit+100+Canmore+AB+T1W+2W8" target="_blank" rel="noopener">Get directions →</a></div>
+      </div>
+    </div>
+    <form class="rv" onsubmit="event.preventDefault();this.querySelector('button').textContent='Thanks! We\'ll be in touch.'">
+      <div class="f2">
+        <div class="fld"><label for="n">Name</label><input id="n" required></div>
+        <div class="fld"><label for="p">Phone</label><input id="p" type="tel"></div>
+      </div>
+      <div class="fld"><label for="e">Email</label><input id="e" type="email" required></div>
+      <div class="fld"><label>Service</label>
+        <div class="chips">
+          <label><input type="radio" name="s" checked><span>Vacation Rentals / Airbnb</span></label>
+          <label><input type="radio" name="s"><span>Residential</span></label>
+          <label><input type="radio" name="s"><span>Commercial</span></label>
+          <label><input type="radio" name="s"><span>Carpet and Floor</span></label>
+          <label><input type="radio" name="s"><span>Handyman</span></label>
+          <label><input type="radio" name="s"><span>Photo and Video</span></label>
+        </div>
+      </div>
+      <div class="fld"><label for="m">Tell us about your property</label><textarea id="m"></textarea></div>
+      <button class="btn btn-dark" type="submit">Send quote request</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap ft-grid">
+    <div><a href="#" class="ft-logo"><img src="images/logo.png" alt="Canmore Condo Cleaning and Hosting Services"></a>
+      <p>Cleaning and hosting services in the town of Canmore. AirBnB / vacation rental cleaning specialists.</p></div>
+    <div><h4>Services</h4><ul>
+      <li><a href="#airbnb">Vacation Rentals / Airbnb</a></li>
+      <li><a href="#services">Residential</a></li>
+      <li><a href="#services">Commercial</a></li>
+      <li><a href="#services">Carpet and Floor Cleaning</a></li>
+      <li><a href="#services">Handyman Services</a></li>
+      <li><a href="#services">Photo and Video</a></li></ul></div>
+    <div><h4>Quick links</h4><ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About us</a></li>
+      <li><a href="#quote">Contact form</a></li>
+      <li><a href="#quote">Get a quote now!</a></li></ul></div>
+    <div><h4>Visit</h4><ul>
+      <li>130 Bow Meadows Crescent<br>Unit 100<br>Canmore, AB T1W 2W8</li></ul></div>
+  </div>
+  <div class="wrap ft-bottom">
+    <span>Copyright © 2026 Canmore Condo Cleaning. All Rights Reserved.</span>
+    <span>Design by <a href="https://cleaningdigital.ca/" target="_blank" rel="noopener">Cleaning Digital</a>.</span>
+  </div>
+</footer>
+
+<div class="mbar"><a href="#quote" class="btn btn-dark" style="background:var(--river);border-color:var(--river)">Get a quote</a><a href="#services" class="btn btn-line">Services</a></div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.nav ul a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+</script>
+</body>
+</html>
