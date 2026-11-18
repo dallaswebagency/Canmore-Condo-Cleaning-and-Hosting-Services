@@ -65,7 +65,13 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,244,239,.93);backdro
 
 /* hero */
 .hero{padding:70px 0 0;position:relative}
-.hero-top{display:grid;grid-template-columns:1.35fr .65fr;gap:60px;align-items:end}
+.hero-top{display:grid;grid-template-columns:1.3fr .7fr;gap:64px;align-items:center}
+.hero-photo{position:relative;margin:0 14px 34px 0}
+@media(max-width:1020px){.hero-photo{max-width:560px}.hp-badge{left:12px!important}}
+.hero-photo:before{content:"";position:absolute;inset:14px -14px -14px 14px;border:1.5px solid var(--river);border-radius:18px;z-index:0}
+.hero-photo img{position:relative;z-index:1;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px}
+.hp-badge{position:absolute;z-index:2;left:-22px;bottom:26px;background:var(--snow);border:1px solid var(--line);border-radius:999px;padding:10px 18px 10px 14px;display:flex;align-items:center;gap:10px;font-weight:600;font-size:14px;box-shadow:0 14px 30px -18px rgba(0,0,0,.35)}
+.hp-badge i{width:9px;height:9px;border-radius:50%;background:var(--river);box-shadow:0 0 0 4px rgba(63,127,131,.18)}
 .hero h1{font-size:clamp(48px,7.6vw,112px);color:var(--ink)}
 .hero h1 em{font-style:normal;color:var(--river)}
 .hero-side p{font-size:19px;color:#4a4e50;margin:14px 0 28px}
@@ -247,6 +253,7 @@ footer{background:#232526;color:#c9cbc9;padding:80px 0 0;position:relative}
       <h1>Canmore Condo Cleaning <em>&amp;&nbsp;Hosting</em> Services</h1>
     </div>
     <div class="hero-side rv">
+      <div class="hero-photo"><img src="images/hero-side.jpg" alt="Carpet being vacuumed in a clean living room"><span class="hp-badge"><i></i>Currently accepting new clients</span></div>
       <span class="label">AirBnB / Vacation rental cleaning specialists</span>
       <p>Cleaning and hosting services in the town of Canmore, keeping rentals, homes and businesses spotless.</p>
       <div class="btns">
